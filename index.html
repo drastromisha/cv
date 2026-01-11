@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Hamed - Postdoctoral Researcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --light-gray: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .experience-item, .education-item, .publication-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .item-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .item-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .item-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-description {
+            line-height: 1.7;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .skill-category li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 1.1rem;
+        }
+
+        .contact-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: var(--primary-color);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .item-header {
+                flex-direction: column;
+            }
+
+            .item-date {
+                margin-top: 0.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mahmoud Hamed</h1>
+        <p>Postdoctoral Researcher in Astrophysics</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am a postdoctoral researcher at the Centro de Astrobiología (CAB, CSIC), specializing in multiwavelength, spatially resolved spectral energy distribution (SED) fitting of high-redshift galaxies. My research focuses on exploiting JWST observations to study stellar populations, dust attenuation, star formation, and stellar mass assembly.</p>
+                <p>I obtained my PhD in Astrophysics with distinction in September 2023 from the National Centre for Nuclear Research (NCBJ, Poland), with a dissertation on dust attenuation in dusty star-forming galaxies. I have authored and co-authored 15 papers in high-impact international journals, advancing our understanding of dust attenuation laws, star formation calibrations, and the physical properties of dusty galaxies across cosmic time.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Postdoctoral Researcher (Doctor FC3)</div>
+                        <div class="item-subtitle">Centro de Astrobiología (CAB, CSIC), Spain</div>
+                    </div>
+                    <div class="item-date">2024 - Present</div>
+                </div>
+                <div class="item-description">
+                    Leading research on spatially resolved analysis of dusty star-forming galaxies. Developing two-dimensional, pixel-based spectral modeling techniques for extragalactic astrophysics using JWST observations. PI of the PIB2021-127718NB-100 project (€484,000) focused on multiwavelength SED fitting of high-redshift galaxies.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Postdoctoral Researcher</div>
+                        <div class="item-subtitle">National Centre for Nuclear Research (NCBJ), Poland</div>
+                    </div>
+                    <div class="item-date">2024</div>
+                </div>
+                <div class="item-description">
+                    Continued research on dust attenuation in star-forming galaxies and development of advanced SED fitting techniques for JWST data analysis.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">PhD Researcher</div>
+                        <div class="item-subtitle">National Centre for Nuclear Research (NCBJ), Poland</div>
+                    </div>
+                    <div class="item-date">2019 - 2023</div>
+                </div>
+                <div class="item-description">
+                    Conducted doctoral research on dust attenuation in dusty star-forming galaxies. PI of NCN PRELUDIUM grant (€32,400) investigating dust attenuation and environmental effects. Co-PI on SONATA-BIS project (€404,945) studying dusty galaxies with ALMA and Herschel. Published multiple papers in high-impact journals and received NAWA-STER fellowship for outstanding international doctoral students.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Pre-doctoral Researcher</div>
+                        <div class="item-subtitle">Laboratoire d'Astrophysique de Marseille, France</div>
+                    </div>
+                    <div class="item-date">2018 - 2019</div>
+                </div>
+                <div class="item-description">
+                    Worked on multiwavelength analysis of high-redshift galaxies and developed expertise in SED fitting techniques.
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">PhD in Astrophysics (with distinction)</div>
+                        <div class="item-subtitle">National Centre for Nuclear Research (NCBJ), Poland</div>
+                    </div>
+                    <div class="item-date">2023</div>
+                </div>
+                <div class="item-description">
+                    Dissertation: Dust Attenuation in Dusty Star-Forming Galaxies
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Master's Degree in Physics (Diplômé en Physique)</div>
+                        <div class="item-subtitle">Aix-Marseille University (AMU), France</div>
+                    </div>
+                    <div class="item-date">2019</div>
+                </div>
+                <div class="item-description">
+                    Specialization: Fundamental Physics
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Bachelor's Degree in Physics (Licenciado en Física)</div>
+                        <div class="item-subtitle">Lebanese University, Lebanon</div>
+                    </div>
+                    <div class="item-date">2015</div>
+                </div>
+                <div class="item-description">
+                    Specialization: Fundamental Physics
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            
+            <div class="publication-item">
+                <div class="item-title">Decoding the IRX-beta dust attenuation relation in star-forming galaxies at intermediate redshift</div>
+                <div class="item-subtitle">Hamed et al., 2023 | Astronomy and Astrophysics, 679-A26</div>
+                <div class="item-description">
+                    First author publication analyzing the relationship between infrared excess and UV spectral slope in star-forming galaxies, providing new insights into dust attenuation mechanisms.
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="item-title">The slippery slope of dust attenuation curves</div>
+                <div class="item-subtitle">Hamed et al., 2023 | Astronomy and Astrophysics, 674-A99</div>
+                <div class="item-description">
+                    Demonstrated the correlation of dust attenuation laws with star-to-dust compactness up to z = 4, revealing fundamental connections between galaxy structure and dust properties.
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="item-title">Multiwavelength dissection of a massive heavily dust-obscured galaxy and its blue companion at z=2</div>
+                <div class="item-subtitle">Hamed et al., 2021 | Astronomy and Astrophysics, 646-A127</div>
+                <div class="item-description">
+                    Comprehensive multiwavelength analysis of an ultra-dusty galaxy system, combining data from multiple facilities to understand stellar populations and dust properties.
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="item-title">GA-NIFS: AGN activity in a Lyα emitter within a triple-AGN system anchored by a passive galaxy at z=3</div>
+                <div class="item-subtitle">Perna et al. (incl. Hamed), 2026 | Astronomy and Astrophysics</div>
+                <div class="item-description">
+                    Contributing author in a study of active galactic nuclei using JWST NIRSpec observations, revealing complex interactions in high-redshift galaxy systems.
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="item-title">SFR estimations from z = 0 to z = 0.9</div>
+                <div class="item-subtitle">Figueira et al. (incl. Hamed), 2022 | Astronomy and Astrophysics, 667-A29</div>
+                <div class="item-description">
+                    Comprehensive comparison of star formation rate calibrators across different redshifts, establishing best practices for SFR measurements in star-forming galaxies.
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem;"><strong>Total publications:</strong> 15 papers in peer-reviewed international journals</p>
+        </section>
+
+        <section id="skills">
+            <h2>Research Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Research Areas</h3>
+                    <ul>
+                        <li>Extragalactic Astrophysics</li>
+                        <li>High-redshift Galaxies</li>
+                        <li>Dust Attenuation</li>
+                        <li>Star Formation</li>
+                        <li>Stellar Populations</li>
+                        <li>Galaxy Evolution</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>SED Fitting (CIGALE)</li>
+                        <li>JWST Data Analysis</li>
+                        <li>ALMA Data Reduction</li>
+                        <li>Morphological Analysis (GALFIT)</li>
+                        <li>Statistical Methods</li>
+                        <li>Python & Data Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Observational Facilities</h3>
+                    <ul>
+                        <li>JWST (NIRCam, NIRSpec)</li>
+                        <li>ALMA</li>
+                        <li>Herschel Space Observatory</li>
+                        <li>Multiwavelength Surveys</li>
+                        <li>UV to Far-IR Observations</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:mhamed@cab.inta-csic.es">📧 Email</a>
+                <a href="https://orcid.org/0000-0001-9626-9642" target="_blank">🔬 ORCID</a>
+                <a href="https://github.com/astromisha" target="_blank">💻 GitHub</a>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">🎓 Google Scholar</a>
+                <a href="https://www.researchgate.net/profile/Mahmoud-Hamed" target="_blank">📊 ResearchGate</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mahmoud Hamed. All rights reserved.</p>
+    </footer>
+</body>
+</html>
